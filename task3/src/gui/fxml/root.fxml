@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RootUIController">
+   <children>
+      <Button fx:id="btnMock" layoutX="30.0" layoutY="41.0" minHeight="70.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="70.0" prefWidth="100.0" style="-fx-wrap-text: true;" text="Start Mock-up Client" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="btnFB" layoutX="168.0" layoutY="41.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="70.0" prefWidth="100.0" text="Start FastBill Client" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

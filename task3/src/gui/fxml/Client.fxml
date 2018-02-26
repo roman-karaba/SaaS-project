@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="150.0" tabMaxWidth="150.0" tabMinHeight="50.0" tabMinWidth="150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainUIController">
+  <tabs>
+    <Tab text="Dashboard">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <GridPane layoutX="14.0" layoutY="-14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                <RowConstraints maxHeight="719.0" minHeight="0.0" prefHeight="355.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="719.0" minHeight="10.0" prefHeight="295.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="719.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                <ListView fx:id="notSoldDash" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                  <GridPane.margin>
+                    <Insets top="50.0" />
+                  </GridPane.margin>
+                  <padding>
+                    <Insets top="10.0" />
+                  </padding>
+                </ListView>
+
+                <Label minHeight="-Infinity" prefHeight="40.0" style="-fx-border-width: 2px; -fx-border-color: grey;" text="All Current Products" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                  <GridPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </GridPane.margin>
+                </Label>
+
+                <ListView fx:id="subDash" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <GridPane.margin>
+                    <Insets top="50.0" />
+                  </GridPane.margin>
+                </ListView>
+                <Label minHeight="-Infinity" prefHeight="40.0" style="-fx-border-width: 2px; -fx-border-color: grey;" text="Subscriptions" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                  <GridPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </GridPane.margin>
+                </Label>
+                <ListView fx:id="customerDash" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                  <GridPane.margin>
+                    <Insets top="50.0" />
+                  </GridPane.margin>
+                </ListView>
+                <Label minHeight="-Infinity" prefHeight="40.0" style="-fx-border-width: 2px; -fx-border-color: grey;" text="Customers" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                  <GridPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </GridPane.margin>
+                </Label>
+                <ListView fx:id="soldDash" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <GridPane.margin>
+                    <Insets top="50.0" />
+                  </GridPane.margin>
+                </ListView>
+                <Label minHeight="-Infinity" prefHeight="40.0" style="-fx-border-width: 2px; -fx-border-color: grey;" text="Invoices" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                  <GridPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </GridPane.margin>
+                </Label>
+                        <Button fx:id="addNewCustomerBtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="167.0" text="Add New Customer" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="25.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="getAllUnpaidInvoicesBtn" layoutX="47.0" layoutY="671.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="167.0" style="-fx-wrap-text: True; -fx-content-display: None;" text="Get All Unpaid Invoices" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets right="25.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="addNewInvoiceBtn" layoutX="10.0" layoutY="671.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="167.0" text="Add New Invoice" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="unpaidCustomerTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              </children>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Customers">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+          <ListView fx:id="customerArea" maxWidth="1.7976931348623157E308" prefHeight="723.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+          </ListView>
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Subscriptions">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <ScrollPane layoutX="362.0" layoutY="253.0" prefHeight="719.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <ListView fx:id="subscriptionArea" maxWidth="1.7976931348623157E308" prefHeight="723.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                </ListView>
+              </content>
+              <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </padding>
+            </ScrollPane>
+                  <Button fx:id="testBtn" contentDisplay="CENTER" mnemonicParsing="false" text="Button" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Not Sold Products">
+    <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <children>
+          <ScrollPane layoutX="362.0" layoutY="253.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <content>
+              <ListView fx:id="notSoldProductArea" maxWidth="1.7976931348623157E308" prefHeight="723.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+              </ListView>
+            </content>
+            <padding>
+              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+          </ScrollPane>
+        </children>
+      </AnchorPane>
+    </content>
+  </Tab>
+    <Tab text="Customer Unpaid Invoices">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <ScrollPane layoutX="362.0" layoutY="253.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <ListView fx:id="soldProductArea" maxWidth="1.7976931348623157E308" prefHeight="723.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                </ListView>
+              </content>
+              <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </padding>
+            </ScrollPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Finance Flow">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+
+  </tabs>
+</TabPane>
